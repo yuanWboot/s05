@@ -1,5 +1,6 @@
 package com.zy.spring.ioc;
 
+import com.zy.spring.ioc.dao.Order;
 import com.zy.spring.ioc.dao.UserDao;
 import com.zy.spring.ioc.service.UserService;
 import org.springframework.context.ApplicationContext;
@@ -13,9 +14,12 @@ public class SpringApplication {
 //        UserDao userDao1 = context.getBean("userDao", UserDao.class);
 //        UserDao userDao2 = context.getBean("userDao", UserDao.class);
 //        UserDao userDao3 = context.getBean("userDao", UserDao.class);
-        UserService userService = context.getBean("userService", UserService.class);
-        UserService userService1 = context.getBean("userService", UserService.class);
-        UserService userService2 = context.getBean("userService", UserService.class);
+//        UserService userService = context.getBean("userService", UserService.class);
+//        UserService userService1 = context.getBean("userService", UserService.class);
+//        UserService userService2 = context.getBean("userService", UserService.class);
+        Order order1 = context.getBean("order1", Order.class);
+        order1.pay();
+        ((ClassPathXmlApplicationContext) context).registerShutdownHook();
 
     }
 }

@@ -7,6 +7,10 @@
     <bean id="userService" class="com.zy.spring.ioc.service.UserService" scope="prototype">
         <property name="userDao" ref="userDao"/>
     </bean>
-
+    <bean id="order1" class="com.zy.spring.ioc.dao.Order"
+          init-method="init" destroy-method="destroy">
+        <property name="price" value="19.8"/>
+        <property name="quantity" value="1000"/>
+    </bean>
 
 </beans>
