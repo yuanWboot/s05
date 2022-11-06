@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="userDao" class="com.zy.spring.ioc.dao.UserDao" scope="prototype"/>
-    <bean id="userService" class="com.zy.spring.ioc.service.UserService">
+    <bean id="userService" class="com.zy.spring.ioc.service.UserService" scope="prototype">
         <property name="userDao" ref="userDao"/>
     </bean>
 
