@@ -1,0 +1,1 @@
+scope singleton 与 prototype的区别
